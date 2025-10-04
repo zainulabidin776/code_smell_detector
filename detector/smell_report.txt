@@ -1,0 +1,123 @@
+================================================================================
+CODE SMELL DETECTION REPORT
+================================================================================
+
+Active Smells Evaluated: LongMethod, GodClass, DuplicatedCode, LargeParameterList, MagicNumbers, FeatureEnvy
+
+Total Code Smells Found: 20
+
+
+--------------------------------------------------------------------------------
+LongMethod: 1 occurrence(s)
+--------------------------------------------------------------------------------
+
+  File: smelly_code.py
+  Method 'calculate_and_process_overdue_fees_with_notifications_and_updates' has 61 lines (threshold: 50)
+  Lines: 95-155
+
+--------------------------------------------------------------------------------
+DuplicatedCode: 1 occurrence(s)
+--------------------------------------------------------------------------------
+
+  File: smelly_code.py
+  Found 18 duplicated code block(s)
+    • Lines 62-66 duplicate Lines 87-91 (80.0% similar)
+    • Lines 63-67 duplicate Lines 88-92 (100.0% similar)
+    • Lines 64-68 duplicate Lines 89-93 (100.0% similar)
+    • Lines 65-69 duplicate Lines 90-94 (80.0% similar)
+    • Lines 86-90 duplicate Lines 135-139 (80.0% similar)
+    • Lines 87-91 duplicate Lines 136-140 (100.0% similar)
+    • Lines 88-92 duplicate Lines 137-141 (100.0% similar)
+    • Lines 89-93 duplicate Lines 138-142 (100.0% similar)
+    • Lines 90-94 duplicate Lines 139-143 (100.0% similar)
+    • Lines 91-95 duplicate Lines 140-144 (80.0% similar)
+    • Lines 156-160 duplicate Lines 171-175 (80.0% similar)
+    • Lines 157-161 duplicate Lines 172-176 (80.0% similar)
+    • Lines 158-162 duplicate Lines 173-177 (80.0% similar)
+    • Lines 159-163 duplicate Lines 174-178 (80.0% similar)
+    • Lines 160-164 duplicate Lines 175-179 (100.0% similar)
+    • Lines 161-165 duplicate Lines 176-180 (100.0% similar)
+    • Lines 162-166 duplicate Lines 177-181 (100.0% similar)
+    • Lines 163-167 duplicate Lines 178-182 (80.0% similar)
+
+--------------------------------------------------------------------------------
+LargeParameterList: 1 occurrence(s)
+--------------------------------------------------------------------------------
+
+  File: smelly_code.py
+  Method 'process_book_checkout' has 6 parameters (threshold: 5)
+  Line: 58
+
+--------------------------------------------------------------------------------
+MagicNumbers: 17 occurrence(s)
+--------------------------------------------------------------------------------
+
+  File: smelly_code.py
+  Magic number 3 found at line 227 in main
+  Line: 227
+
+  File: smelly_code.py
+  Magic number 2 found at line 228 in main
+  Line: 228
+
+  File: smelly_code.py
+  Magic number 14 found at line 236 in main
+  Line: 236
+
+  File: smelly_code.py
+  Magic number 7 found at line 119 in LibraryManagementSystem
+  Line: 119
+
+  File: smelly_code.py
+  Magic number 30 found at line 142 in LibraryManagementSystem
+  Line: 142
+
+  File: smelly_code.py
+  Magic number 5 found at line 120 in LibraryManagementSystem
+  Line: 120
+
+  File: smelly_code.py
+  Magic number 14 found at line 121 in LibraryManagementSystem
+  Line: 121
+
+  File: smelly_code.py
+  Magic number 35 found at line 122 in LibraryManagementSystem
+  Line: 122
+
+  File: smelly_code.py
+  Magic number 30 found at line 123 in LibraryManagementSystem
+  Line: 123
+
+  File: smelly_code.py
+  Magic number 10 found at line 122 in LibraryManagementSystem
+  Line: 122
+
+  File: smelly_code.py
+  Magic number 105 found at line 124 in LibraryManagementSystem
+  Line: 124
+
+  File: smelly_code.py
+  Magic number 345 found at line 126 in LibraryManagementSystem
+  Line: 126
+
+  File: smelly_code.py
+  Magic number 7 found at line 122 in LibraryManagementSystem
+  Line: 122
+
+  File: smelly_code.py
+  Magic number 15 found at line 124 in LibraryManagementSystem
+  Line: 124
+
+  File: smelly_code.py
+  Magic number 20 found at line 126 in LibraryManagementSystem
+  Line: 126
+
+  File: smelly_code.py
+  Magic number 14 found at line 124 in LibraryManagementSystem
+  Line: 124
+
+  File: smelly_code.py
+  Magic number 30 found at line 126 in LibraryManagementSystem
+  Line: 126
+
+================================================================================

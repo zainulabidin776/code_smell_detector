@@ -1,0 +1,178 @@
+# Code Smell Detection System
+## Software Reengineering Assignment 2
+
+**Team Members:** Zain, Yusuf, Ahmed  
+**Institution:** NUCES Islamabad  
+**Semester:** Fall 2025
+
+---
+
+## 📋 Table of Contents
+1. [Project Overview](#project-overview)
+2. [Installation](#installation)
+3. [Project Structure](#project-structure)
+4. [How to Run](#how-to-run)
+5. [Configuration](#configuration)
+6. [Testing](#testing)
+7. [Understanding the Output](#understanding-the-output)
+
+---
+
+## 🎯 Project Overview
+
+This project implements:
+1. **Smelly Code**: A Library Management System (250 LOC) with 6 intentional code smells
+2. **Detection Tool**: An automated code smell detector with configurable thresholds
+3. **Unit Tests**: 8 comprehensive tests validating functionality
+
+### Detected Code Smells
+- Long Method
+- God Class (Blob)
+- Duplicated Code
+- Large Parameter List
+- Magic Numbers
+- Feature Envy
+
+---
+
+## 💻 Installation
+
+### Prerequisites
+- Python 3.7 or higher
+- pip (Python package manager)
+
+### Required Libraries
+
+```bash
+# Install required dependencies
+pip install pyyaml
+```
+
+That's it! The project uses Python's built-in `ast` module for code analysis.
+
+### Quick Setup
+
+```bash
+# 1. Create project directory
+mkdir code_smell_detector
+cd code_smell_detector
+
+# 2. Create all project files (copy the provided files)
+# - smelly_code.py
+# - test_smelly_code.py
+# - smell_detector.py
+# - config.yaml
+
+# 3. Install dependencies
+pip install pyyaml
+```
+
+---
+
+## 📁 Project Structure
+
+```
+code_smell_detector/
+│
+├── smelly_code.py              # Deliberately smelly Library Management System
+├── test_smelly_code.py         # Unit tests (all pass)
+├── smell_detector.py           # Main detection tool
+├── config.yaml                 # Configuration file with thresholds
+├── docs/
+│   └── smells.md              # Documentation of inserted smells
+├── README.md                   # This file
+└── Assignment_Report.pdf       # Detailed report (4-6 pages)
+```
+
+---
+
+## 🚀 How to Run
+
+### 1. Run the Smelly Code
+
+```bash
+# Execute the Library Management System
+python smelly_code.py
+```
+
+**Expected Output:**
+```
+Library Management System Running...
+Total Books: 2
+Total Members: 2
+Total Transactions: 1
+```
+
+### 2. Run Unit Tests
+
+```bash
+# Run all 8 unit tests
+python test_smelly_code.py
+
+# Run with verbose output
+python test_smelly_code.py -v
+```
+
+**Expected Output:**
+```
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+OK
+```
+
+### 3. Run the Smell Detector
+
+#### Basic Usage
+
+```bash
+# Analyze the smelly code with default configuration
+python smell_detector.py smelly_code.py
+```
+
+#### Advanced Usage
+
+```bash
+# Analyze with custom output file
+python smell_detector.py smelly_code.py --output my_report.txt
+
+# Analyze only specific smells
+python smell_detector.py smelly_code.py --only LongMethod,GodClass
+
+# Exclude specific smells
+python smell_detector.py smelly_code.py --exclude MagicNumbers
+
+# Use custom configuration file
+python smell_detector.py smelly_code.py --config custom_config.yaml
+
+# Analyze multiple files
+python smell_detector.py file1.py file2.py file3.py
+```
+
+#### CLI Options Summary
+
+| Option | Description | Example |
+|--------|-------------|---------|
+| `files` | Python files to analyze (required) | `smelly_code.py` |
+| `--config` | Configuration file path | `--config custom.yaml` |
+| `--only` | Only check specified smells | `--only LongMethod,GodClass` |
+| `--exclude` | Exclude specified smells | `--exclude MagicNumbers` |
+| `--output` | Output report file | `--output report.txt` |
+
+---
+
+## ⚙️ Configuration
+
+### Understanding config.yaml
+
+```yaml
+smells:
+  LongMethod:
+    enabled: true
+    max_lines: 50          # Methods longer than 50 lines flagged
+  
+  GodClass:
+    enabled: true
+    max_methods: 15        # Classes with >15 methods flagged
+    max_attributes: 10     # Classes with

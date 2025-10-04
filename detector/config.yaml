@@ -1,0 +1,38 @@
+smells:
+  LongMethod:
+    enabled: true
+    max_lines: 50
+    # Rationale: Methods exceeding 50 lines become difficult to understand and test.
+    # Industry standard suggests keeping methods under 50 lines for maintainability.
+  
+  GodClass:
+    enabled: true
+    max_methods: 15
+    max_attributes: 10
+    # Rationale: Classes with more than 15 methods or 10 attributes likely violate
+    # Single Responsibility Principle. Research shows optimal class size is 7-15 methods.
+  
+  DuplicatedCode:
+    enabled: true
+    min_similarity: 0.8
+    min_lines: 5
+    # Rationale: Code blocks of 5+ lines with 80% similarity indicate copy-paste.
+    # This threshold balances false positives with genuine duplications.
+  
+  LargeParameterList:
+    enabled: true
+    max_parameters: 5
+    # Rationale: Functions with more than 5 parameters are hard to understand and use.
+    # Clean Code principles recommend maximum 3-4 parameters; we use 5 as threshold.
+  
+  MagicNumbers:
+    enabled: true
+    allowed_numbers: [0, 1, -1]
+    # Rationale: Only common convention numbers (0, 1, -1) are allowed.
+    # Other numeric literals should be named constants for clarity.
+  
+  FeatureEnvy:
+    enabled: true
+    external_call_threshold: 0.6
+    # Rationale: If a method accesses external object data more than 60% of the time,
+    # it likely belongs in that other class, indicating poor cohesion.
